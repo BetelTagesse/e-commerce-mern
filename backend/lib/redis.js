@@ -5,4 +5,11 @@ dotenv.config();
 
 export const redis = new Redis(process.env.UPSTASH_REDIS_URL);
 
-await redis.set("foo", "bar");
+export const testRedisConnection = async () => {
+  try {
+    await redis.set("stick", "bar");
+    console.log("Redis connected successfully");
+  } catch (error) {
+    console.error("Redis connection failed:", error.message);
+  }
+};
