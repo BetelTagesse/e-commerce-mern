@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^1.13.2",
     "bcryptjs": "^3.0.3",
     "cloudinary": "^2.8.0",
     "cookie-parser": "^1.4.7",
@@ -11,7 +12,8 @@
     "mongodb": "3.7",
     "mongoose": "^8.20.0",
     "nodemon": "^3.1.10",
-    "stripe": "^19.3.0"
+    "stripe": "^19.3.0",
+    "uuid": "^13.0.0"
   },
   "name": "e-commerce-mern-1",
   "version": "1.0.0",
