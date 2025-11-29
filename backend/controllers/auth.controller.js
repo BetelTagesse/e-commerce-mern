@@ -166,4 +166,10 @@ export const refreshToken = async (req, res) => {
   console.log("refresh token controller");
 };
 
-// export const getProfile = async (req, res) => {};
+export const getProfile = async (req, res) => {
+  try {
+    res.json(req.user);
+  } catch (error) {
+    res.status(500).json({ message: "server error", error: error.message });
+  }
+};

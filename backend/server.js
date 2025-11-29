@@ -5,7 +5,8 @@ import cookieParser from "cookie-parser";
 import authRoutes from "./routes/auth.routes.js";
 import productRoutes from "./routes/product.routes.js";
 import cartRoutes from "./routes/cart.routes.js";
-import paymentRoutes from "./routes/payment.routes.js";
+import paymentRoutes from "./routes/payment.route.js";
+import analyticsRoutes from "./routes/analytics.routes.js";
 
 import { connectDB } from "./lib/db.js";
 import { testRedisConnection } from "./lib/redis.js";

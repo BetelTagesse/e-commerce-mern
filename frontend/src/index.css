@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* ---------------------------------
+   Tailwind v4 Theme Extensions
+----------------------------------*/
+@theme {
+  /* Radial gradient token */
+  --gradient-orange-radial: radial-gradient(
+    ellipse at top,
+    rgba(255, 165, 0, 0.35) 0%,
+    rgba(255, 120, 0, 0.25) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+
+  /* Theme Colors */
+  --color-orange-primary: #ff8a1f;
+  --color-orange-secondary: #ff6a00;
+  --color-orange-dark: #cc5200;
+  --color-border-orange: #ff8a1f;
+}
+
+/* ---------------------------------
+   Global CSS Variables
+----------------------------------*/
+:root {
+  --orange-primary: #ff8c00;
+  --orange-secondary: #ff5e00;
+  --orange-light: #ffe5cc;
+}
+
+/* Smooth transitions everywhere */
+* {
+  @apply transition-colors duration-200 ease-in-out;
+}
+
+/* ---------------------------------
+   Custom Components
+----------------------------------*/
+@layer components {
+  /* Orange Button */
+  .btn-orange {
+    @apply px-4 py-2 rounded-md text-white font-medium shadow-md;
+    background-color: var(--orange-primary);
+  }
+  .btn-orange:hover {
+    background-color: var(--orange-secondary);
+    box-shadow: 0 0 25px rgba(255, 94, 0, 0.5);
+  }
+
+  /* Orange Border Container */
+  .border-orange-theme {
+    border: 2px solid var(--orange-primary);
+    @apply rounded-lg;
+  }
+  .border-orange-theme:hover {
+    border-color: var(--orange-secondary);
+  }
+
+  /* Orange Themed Text */
+  .text-orange-theme {
+    color: var(--orange-primary);
+  }
+  .text-orange-theme:hover {
+    color: var(--orange-secondary);
+  }
+
+  /* Orange Glow */
+  .glow-orange {
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
+  }
+  .glow-orange:hover {
+    box-shadow: 0 0 25px rgba(255, 94, 0, 0.5);
+  }
+
+  /* Linear Orange Gradient */
+  .bg-orange-gradient {
+    background: linear-gradient(
+      to right,
+      var(--orange-primary),
+      var(--orange-secondary)
+    );
+  }
+}
+
+/* ---------------------------------
+   Radial Gradient Background
+----------------------------------*/
+.bg-orange-radial {
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 140, 0, 0.35) 0%,
+    rgba(255, 94, 0, 0.25) 45%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
